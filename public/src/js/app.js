@@ -1,3 +1,7 @@
+if (!window.Promise) {
+  window.Promise = Promise; // polyfill
+}
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/sw.js')
