@@ -7,5 +7,5 @@ self.addEventListener('activate', (event) => {
 })
 
 self.addEventListener('fetch', (event) => {
-  console.log('[sw] fetching', event);
+  event.respondWith(fetch(event.request));
 })
